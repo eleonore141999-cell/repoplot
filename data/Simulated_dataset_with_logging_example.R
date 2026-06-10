@@ -1,8 +1,13 @@
-# Setup logging
+# Example: Data Generation with Logging
+# This demonstrates how to use the logging setup in your data generation script
+
+# Source the logging setup
 source("R/setup_logging.R")
+
+# Initialize logging
 init_logging(log_level = "INFO", log_dir = "output", verbose = TRUE)
 
-# Log script start
+# Log the start of the script
 exec_info <- log_script_start("Simulated dataset for barplot example")
 
 tryCatch({
@@ -20,18 +25,18 @@ tryCatch({
     SEX     = sample(c(0, 1), n, replace = TRUE),
     MAL     = sample(c(0, 1), n, replace = TRUE),
     DATD    = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
-    AGED    = round(runif(n, 18, 85)), # Ensuring Age >= 18 as per exclusion criteria
+    AGED    = round(runif(n, 18, 85)),
     SYCH    = sample(c(0, 1), n, replace = TRUE),
-    CHA     = rep("L01DB", n), # ATC code for anthracyclines
+    CHA     = rep("L01DB", n),
     CHT     = sample(1:6, n, replace = TRUE),
     CHDA    = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
-    CHH     = sample(1001:1050, n, replace = TRUE), # Simulated hospital IDs
+    CHH     = sample(1001:1050, n, replace = TRUE),
     SUR     = sample(c(0, 1), n, replace = TRUE),
     SURDA   = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
     RAD     = sample(c(0, 1), n, replace = TRUE),
-  RADDA   = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
-  RADTA   = sample(c(0, 1), n, replace = TRUE),
-  RADTADA = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
+    RADDA   = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
+    RADTA   = sample(c(0, 1), n, replace = TRUE),
+    RADTADA = as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2023/01/01"), by = "day"), n, replace = TRUE)),
     REC     = sample(c(0, 1), n, replace = TRUE)
   )
   log_info("Population variables created successfully")
@@ -56,30 +61,21 @@ tryCatch({
   log_info("Hospitalization variables created successfully")
   
   # 4. Determinant Variables (Table 4 & 5)
-  # ATC codes for cardiac medication: C07 (BB), C03 (DIU), C09 (ACE/ARB), C08 (CA),
-  # C07E (BBV), C02 (CAG), C10 (STAT), A10BK (SGLT2), B01 (ACO)
   log_info("Generating determinant variables")
   cardiac_atc <- c("C07", "C03", "C09", "C08", "C07E", "C02", "C10", "A10BK", "B01")
-  
-  # Define specific probabilities for each class (must sum to 1)
-  # Here, C07 (BB) and C09 (ACE/ARB) are set as more common
   med_probs <- c(0.20, 0.15, 0.20, 0.10, 0.05, 0.05, 0.15, 0.05, 0.05)
-  
   dta$MED <- sample(cardiac_atc, n, replace = TRUE, prob = med_probs)
-  dta$DMED <- as.Date(sample(seq(as.Date("2015/01/01"), as.Date("2026/01/01"), by = "day"), n, replace = TRUE))
-  dta$STARTMED <- sample(c(0, 1, 2), n, replace = TRUE)
   log_info("Determinant variables created successfully")
   
-  # Preview the data
-  log_info("Data generation complete: {nrow(dta)} rows, {ncol(dta)} columns")
-  log_debug("Data preview:")
-  print(head(dta))
-  log_success("Simulated dataset created successfully!")
+  # Save the dataset
+  log_info("Saving dataset to output/simulated_data.RData")
+  save(dta, file = "output/simulated_data.RData")
+  log_success("Dataset created and saved successfully!")
   
 }, error = function(e) {
   log_error("Error during data generation: {e$message}")
   stop(e)
 })
 
-# Log script end
+# Log the end of the script
 log_script_end(exec_info)

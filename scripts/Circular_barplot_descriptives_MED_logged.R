@@ -85,6 +85,7 @@ tryCatch({
       color = "black"
     ) +
     ylim(0, 2500) +
+    
     # Make it circular!
     coord_polar()
   
@@ -115,6 +116,7 @@ tryCatch({
   log_debug("Plot scaling and fill applied")
   
   plot_final3 <- plot_final2 +
+    
     # Add labels
     labs(
       title = "Cardiovascular medication use",
@@ -127,10 +129,12 @@ tryCatch({
     theme(
       # Set default color and font family for the text
       text = element_text(color = "gray12", family = "sans"),
+      
       # Customize the text in the title, subtitle, and caption
       plot.title = element_text(face = "bold", size = 25, hjust = 0.05),
       plot.subtitle = element_text(size = 12, hjust = 0.05),
       plot.caption = element_text(size = 10, hjust = .5),
+      
       # Make the background white and remove extra grid lines
       panel.background = element_rect(fill = "white", color = "white"),
       panel.grid = element_blank(),
@@ -150,6 +154,7 @@ tryCatch({
   
 }, error = function(e) {
   log_error("Error during visualization: {e$message}")
+  log_error("Traceback: {paste(utils::head(traceback(), -1), collapse = '\n')}")
   stop(e)
 })
 
