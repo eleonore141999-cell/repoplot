@@ -1,0 +1,57 @@
+INFO [2026-06-10 13:43:13] Logging initialized at 2026-06-10 13:43:13.936824
+INFO [2026-06-10 13:43:13] Log file: output/project_log_20260610_134313.log
+INFO [2026-06-10 13:43:13] Log level: INFO
+INFO [2026-06-10 13:43:13] ========================================
+INFO [2026-06-10 13:43:13] Starting script: Circular barplot descriptives MED
+INFO [2026-06-10 13:43:13] Start time: 2026-06-10 13:43:13.95058
+INFO [2026-06-10 13:43:13] User: eleon
+INFO [2026-06-10 13:43:13] Working directory: C:/Users/eleon/Reproducible-coding-practices-assignment
+INFO [2026-06-10 13:43:13] ========================================
+INFO [2026-06-10 13:43:13] Loading data from simulated dataset
+INFO [2026-06-10 13:43:13] Logging initialized at 2026-06-10 13:43:13.977557
+INFO [2026-06-10 13:43:13] Log file: output/project_log_20260610_134313.log
+INFO [2026-06-10 13:43:13] Log level: INFO
+INFO [2026-06-10 13:43:13] ========================================
+INFO [2026-06-10 13:43:13] Starting script: Simulated dataset for barplot example
+INFO [2026-06-10 13:43:13] Start time: 2026-06-10 13:43:13.990348
+INFO [2026-06-10 13:43:13] User: eleon
+INFO [2026-06-10 13:43:13] Working directory: C:/Users/eleon/Reproducible-coding-practices-assignment
+INFO [2026-06-10 13:43:13] ========================================
+INFO [2026-06-10 13:43:13] Setting seed for reproducibility
+INFO [2026-06-10 13:43:14] Sample size: 10000
+INFO [2026-06-10 13:43:14] Generating population description variables
+INFO [2026-06-10 13:43:14] Population variables created successfully
+INFO [2026-06-10 13:43:14] Generating mortality outcome variables
+INFO [2026-06-10 13:43:14] Mortality variables created successfully
+INFO [2026-06-10 13:43:14] Generating hospitalization outcome variables
+INFO [2026-06-10 13:43:14] Hospitalization variables created successfully
+INFO [2026-06-10 13:43:14] Generating determinant variables
+INFO [2026-06-10 13:43:14] Determinant variables created successfully
+INFO [2026-06-10 13:43:14] Data generation complete: 10000 rows, 28 columns
+DEBUG [2026-06-10 13:43:14] Data preview:
+SUCCESS [2026-06-10 13:43:14] Simulated dataset created successfully!
+INFO [2026-06-10 13:43:14] ========================================
+INFO [2026-06-10 13:43:14] Completed script: Simulated dataset for barplot example
+INFO [2026-06-10 13:43:14] End time: 2026-06-10 13:43:14.134762
+INFO [2026-06-10 13:43:14] Execution time: 0.13 seconds
+INFO [2026-06-10 13:43:14] ========================================
+INFO [2026-06-10 13:43:14] Data loaded successfully: 10000 rows, 28 columns
+INFO [2026-06-10 13:43:14] Loading required libraries
+DEBUG [2026-06-10 13:43:18] Libraries loaded: dplyr, ggplot2, stringr, tidyverse
+INFO [2026-06-10 13:43:18] Computing medication frequencies
+DEBUG [2026-06-10 13:43:18] Medication counts computed
+DEBUG [2026-06-10 13:43:18] Medication proportions and percentages computed
+INFO [2026-06-10 13:43:18] Preparing medication summary data
+INFO [2026-06-10 13:43:19] Medication summary prepared: 9 unique medication types
+INFO [2026-06-10 13:43:19] Creating circular barplot visualization
+DEBUG [2026-06-10 13:43:19] Base plot created
+DEBUG [2026-06-10 13:43:19] Plot scaling and fill applied
+INFO [2026-06-10 13:43:19] Finalizing visualization with theme and labels
+INFO [2026-06-10 13:43:19] Displaying final plot
+INFO [2026-06-10 13:43:20] Saving plot to output/medication_circular_barplot.png
+SUCCESS [2026-06-10 13:43:26] Circular barplot created and saved successfully!
+INFO [2026-06-10 13:43:26] ========================================
+INFO [2026-06-10 13:43:26] Completed script: Simulated dataset for barplot example
+INFO [2026-06-10 13:43:26] End time: 2026-06-10 13:43:26.228017
+INFO [2026-06-10 13:43:26] Execution time: 12.23 seconds
+INFO [2026-06-10 13:43:26] ========================================
