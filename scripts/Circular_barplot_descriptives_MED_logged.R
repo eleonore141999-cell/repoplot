@@ -10,7 +10,7 @@ exec_info <- log_script_start("Circular barplot descriptives MED")
 tryCatch({
   
   log_info("Loading data from simulated dataset")
-  source("scripts/Simulated_dataset_with_logging_example.R")
+load(file.path("output", "simulated_data.RData"))
   log_info("Data loaded successfully: {nrow(dta)} rows, {ncol(dta)} columns")
   
   log_info("Loading required libraries")
@@ -149,7 +149,7 @@ tryCatch({
   
   # Save the plot
   log_info("Saving plot to output/medication_circular_barplot.png")
-  ggsave("output/medication_circular_barplot.png", plot_final3, width = 9, height = 12.6)
+  ggsave(file.path("output", "final_plot.png"), plot_final3, width = 9, height = 12.6)
   log_success("Circular barplot created and saved successfully!")
   
 }, error = function(e) {

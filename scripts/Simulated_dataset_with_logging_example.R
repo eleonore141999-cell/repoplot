@@ -76,6 +76,6 @@ tryCatch({
   log_error("Error during data generation: {e$message}")
   stop(e)
 })
-
+dir.create(c("output"), recursive = TRUE, showWarnings = FALSE)
 # Log the end of the script
 log_script_end(exec_info)
