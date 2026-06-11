@@ -10,7 +10,7 @@ exec_info <- log_script_start("Circular barplot descriptives MED")
 tryCatch({
   
   log_info("Loading data from simulated dataset")
-  source("data/Simulated dataset for barplot example.R")
+  source("scripts/Simulated_dataset_with_logging_example.R")
   log_info("Data loaded successfully: {nrow(dta)} rows, {ncol(dta)} columns")
   
   log_info("Loading required libraries")

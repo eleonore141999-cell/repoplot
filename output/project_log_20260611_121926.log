@@ -1,0 +1,26 @@
+INFO [2026-06-11 12:19:26] Logging initialized at 2026-06-11 12:19:26.253917
+INFO [2026-06-11 12:19:26] Log file: output/project_log_20260611_121926.log
+INFO [2026-06-11 12:19:26] Log level: INFO
+INFO [2026-06-11 12:19:26] ========================================
+INFO [2026-06-11 12:19:26] Starting script: Simulated dataset for barplot example
+INFO [2026-06-11 12:19:26] Start time: 2026-06-11 12:19:26.261341
+INFO [2026-06-11 12:19:26] User: eleon
+INFO [2026-06-11 12:19:26] Working directory: C:/Users/eleon/repoplot
+INFO [2026-06-11 12:19:26] ========================================
+INFO [2026-06-11 12:19:26] Setting seed for reproducibility
+INFO [2026-06-11 12:19:26] Sample size: 10000
+INFO [2026-06-11 12:19:26] Generating population description variables
+INFO [2026-06-11 12:19:26] Population variables created successfully
+INFO [2026-06-11 12:19:26] Generating mortality outcome variables
+INFO [2026-06-11 12:19:26] Mortality variables created successfully
+INFO [2026-06-11 12:19:26] Generating hospitalization outcome variables
+INFO [2026-06-11 12:19:26] Hospitalization variables created successfully
+INFO [2026-06-11 12:19:26] Generating determinant variables
+INFO [2026-06-11 12:19:26] Determinant variables created successfully
+INFO [2026-06-11 12:19:26] Saving dataset to output/simulated_data.RData
+SUCCESS [2026-06-11 12:19:26] Dataset created and saved successfully!
+INFO [2026-06-11 12:19:26] ========================================
+INFO [2026-06-11 12:19:26] Completed script: Simulated dataset for barplot example
+INFO [2026-06-11 12:19:26] End time: 2026-06-11 12:19:26.380448
+INFO [2026-06-11 12:19:26] Execution time: 0.1 seconds
+INFO [2026-06-11 12:19:26] ========================================
