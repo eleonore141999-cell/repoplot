@@ -1,12 +1,8 @@
-
 library(logger)
-
 # Source the logging setup
 source("R/setup_logging.R")
-
 # Initialize logging
 init_logging(log_level = "INFO", log_dir = "output", verbose = TRUE)
-
 # Log the start of the script
 exec_info <- log_script_start("Simulated dataset for barplot example")
 
