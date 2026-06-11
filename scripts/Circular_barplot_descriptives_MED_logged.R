@@ -1,4 +1,4 @@
-# Descriptive statistics barchart from R graphgallery for medication frequencies
+# Descriptive statistics barplot for medication frequencies
 
 # Setup logging
 source("R/setup_logging.R")
@@ -55,7 +55,7 @@ load(file.path("output", "simulated_data.RData"))
       y = "Count"
     ) +
     theme_minimal() +
-    # Make custom panel grid
+    # Make custom panel grid, since coord_polar() doesn't work with the default grid
     geom_hline(
       aes(yintercept = y),
       data.frame(y = c(0, 500, 1000, 1500, 2000, 2500)),
@@ -74,7 +74,7 @@ load(file.path("output", "simulated_data.RData"))
       show.legend = TRUE,
       alpha = .9
     ) +
-    # ADDED: Percentages next to each bar
+    # Add percentages next to each bar
     geom_text(
       aes(
         x = reorder(str_wrap(as.character(MED), 9), count),
@@ -123,7 +123,7 @@ load(file.path("output", "simulated_data.RData"))
       subtitle = paste(
         "\nCount and percentages of patients using that medication class"
       ),
-      caption = "By Eleonore Logie \n Dataset simulated by Gemini AI"
+      caption = "By Eleonore Logie \n Dataset simulated for demonstration purposes"
     ) +
     # Customize general theme
     theme(
