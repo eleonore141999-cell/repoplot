@@ -2,11 +2,13 @@
 The code provided is made in the context of the course "Reproducible coding practices for the health sciences "at Utrecht University, using code for a master's thesis at the Julius Centre, UMC Utrecht. 
 
 First a dataset is simulated. This dataset describes a hypothethical population of patients that have been treated with Anthracyclines, that use different classes of cardiovascular medication, started at different times relative to anthracycline treatment.   
+    No dataset card is included since data is simulated. 
 
 Second, a circular barplot can be made that describes frequencies and proportions of different types of medication (by ATC code) as used in this simulated population. 
+    No model card is included since no model is made. 
 
 # Requirements
-This project requires R v.5.5 or later, and dependencies are managaed with renv (run 'renv::restore()' to install).
+This project requires R v.5.5 or later, and dependencies are managed with renv (run 'renv::restore()' to install).
 
 # Contents
 - `data/` — Simulated dataset for circular barplot example
