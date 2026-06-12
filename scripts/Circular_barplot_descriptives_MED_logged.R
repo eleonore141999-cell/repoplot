@@ -26,9 +26,9 @@ load(file.path("output", "simulated_data.RData"))
   log_debug("Medication counts computed")
   
   med_prop <- prop.table(med_count)
-  # as a function so test can be demonstrated for assignment
-  med_pct <- prop_to_pct(med_prop, round_digits = 1)
-  #Normal: med_pct <- med_prop * 100
+  # as a function so test can be demonstrated for assignment: med_pct <- prop_to_pct(med_prop, round_digits = 1)
+  #Normal: 
+  med_pct <- med_prop * 100
   print(med_pct)
   log_debug("Medication proportions and percentages computed")
   
