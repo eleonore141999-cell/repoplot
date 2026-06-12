@@ -13,7 +13,7 @@ tryCatch({
   set.seed(42)
   n <- 10000
   log_info("Sample size: {n}")
-  
+   
   # 1. Population Description Variables (Table 1)
   log_info("Generating population description variables")
   dta <- data.frame(
